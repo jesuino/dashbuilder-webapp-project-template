@@ -1,0 +1,25 @@
+global:
+    mode: dark
+datasets:
+    - uuid: hello
+      content: >-
+          [
+              ["John", 33],
+              ["Mark", 42],
+              ["Mary", 29]
+          ]
+pages:
+    - properties:
+        margin: 10px
+      components:
+          - html: "<h1 style='margin-bottom: 20px'>Person by Age</h1>"
+          - settings:
+                type: BARCHART
+                lookup:
+                    uuid: hello
+                    group:
+                        - columnGroup:
+                              source: Column 0
+                          functions:
+                              - source: Column 0
+                              - source: Column 1
