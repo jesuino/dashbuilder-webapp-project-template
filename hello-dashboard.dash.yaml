@@ -1,3 +1,5 @@
+global:
+    mode: dark
 datasets:
     - uuid: hello
       content: >-
@@ -7,8 +9,10 @@ datasets:
               ["Mary", 29]
           ]
 pages:
-    - components:
-          - html: "<h1 style='margin-bottom: 20px'>Person by Age - TESTING ACTIONS</h1>"
+    - properties:
+        margin: 10px
+      components:
+          - html: "<h1 style='margin-bottom: 20px'>Person by Age</h1>"
           - settings:
                 type: BARCHART
                 lookup:
